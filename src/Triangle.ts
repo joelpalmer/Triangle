@@ -7,6 +7,10 @@ module app.shapes {
         NotATriangle = <any>'Not a Triangle'
     }
     export class Triangle {
+        public static readonly ThreeEqualSides = 1;
+        public static readonly TwoEqualSides = 2;
+        public static readonly NoEqualSides = 3;
+
         constructor() {
 
         }
@@ -18,15 +22,15 @@ module app.shapes {
                 document.getElementById('result').innerHTML = `${TriangleClassification.NotATriangle}`;
             }
 
-            else if (Helpers.distinctCount(sides) === 1) { //3 equal sides
+            else if (Helpers.distinctCount(sides) === Triangle.ThreeEqualSides) { 
                 document.getElementById('result').innerHTML = `${TriangleClassification.Equilateral}`;
             }
 
-            else if (Helpers.distinctCount(sides) === 2) { //2 equal sides
+            else if (Helpers.distinctCount(sides) === Triangle.TwoEqualSides) { 
                 document.getElementById('result').innerHTML = `${TriangleClassification.Isosceles}`;
             }
 
-            else if (Helpers.distinctCount(sides) === 3) { //no equal sides
+            else if (Helpers.distinctCount(sides) === Triangle.NoEqualSides) { 
                 document.getElementById('result').innerHTML = `${TriangleClassification.Scalene}`;
             }
 
