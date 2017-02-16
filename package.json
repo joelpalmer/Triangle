@@ -1,0 +1,23 @@
+{
+  "name": "triangle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "launch": "lite-server",
+    "build": "tsc",
+    "test": "./node_modules/grunt-cli/bin/grunt jasmine"
+  },
+  "author": "Joel Palmer",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.2.2",
+    "ts-node": "^2.0.0",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5",
+    "@types/jasmine": "^2.5.38",
+    "jasmine": "^2.5.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^1.0.0"
+  }
+}
