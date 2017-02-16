@@ -12,8 +12,7 @@ module app.shapes {
         }
 
         public static GetTriangleClassification() {
-            TriangleLookupForm.GetSides();
-            let sides: number[] = new Array(TriangleLookupForm.Side1, TriangleLookupForm.Side2, TriangleLookupForm.Side3);
+            let sides = TriangleLookupForm.GetSides();
 
             if (sides[0] <= 0 || sides[1] <= 0 || sides[2] <= 0) {
                 document.getElementById('result').innerHTML = `${TriangleClassification.NotATriangle}`;
@@ -46,6 +45,8 @@ module app.shapes {
             TriangleLookupForm.Side1 = parseFloat((<HTMLInputElement>document.getElementById("side1")).value);
             TriangleLookupForm.Side2 = parseFloat((<HTMLInputElement>document.getElementById("side2")).value);
             TriangleLookupForm.Side3 = parseFloat((<HTMLInputElement>document.getElementById("side3")).value);
+
+            return new Array(TriangleLookupForm.Side1, TriangleLookupForm.Side2, TriangleLookupForm.Side3);
         }
 
         public static BindSubmit() {
